@@ -49,7 +49,7 @@ function ImageUpload(){
       const s3 = new S3Client({ region: awsExports.aws_user_files_s3_bucket_region}); // Create an S3 client with the bucket region from AWS configuration
       const command = new GetObjectCommand({ Bucket: awsExports.aws_user_files_s3_bucket, Key: key }); // Create a new GetObjectCommand with the S3 bucket and image key
       console.log(command)
-      const signedUrl = await getSignedUrl(s3, command, { expiresIn: 20 }); // Use getSignedUrl function to generate a pre-signed URL for the image
+      const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 }); // Use getSignedUrl function to generate a pre-signed URL for the image
       console.log(signedUrl);
         // display the signed URL to the user
         // alert(signedUrl);

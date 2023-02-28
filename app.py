@@ -8,7 +8,7 @@ from botocore.config import Config
 
 # Create a Session object with the desired region
 session = boto3.Session(region_name='us-east-2')
-s3 = boto3.resource("s3").Bucket("samp12")
+s3 = boto3.resource("s3").Bucket("BUCKET_NAME")
 
 app = Flask(__name__)
 cognito = session.client('cognito-idp')
@@ -25,13 +25,13 @@ def register():
     password = request.json['password']
     try:
         response = cognito.sign_up(
-            ClientId='1au9fv88r5fnqikmtdmcjoukob',
+            ClientId='CLIENT_ID',
             Username=email,
             Password=password,
             UserAttributes=[
                 {
-                    'Name': 'email',
-                    'Value': email
+                    'Name': email,
+                    'Value': password
                 }
             ]
         )
@@ -45,7 +45,7 @@ def login():
     password = request.json['password']
     try:
         response = cognito.initiate_auth(
-            ClientId='1au9fv88r5fnqikmtdmcjoukob',
+            ClientId='CLIENT_ID',
             AuthFlow='USER_PASSWORD_AUTH',
             AuthParameters={
                 'USERNAME': email,
@@ -92,7 +92,7 @@ def getURL():
             imgkey = request.form("imagekey")
             url = boto3.client('s3').generate_presigned_url(
                 ClientMethod='get_object', 
-                Params={'Bucket': 'samp12', 'Key': imgkey},
+                Params={'Bucket': 'BUCKET_NAME', 'Key': imgkey},
                 ExpiresIn=3600
             )
         return jsonify({'url': url})
