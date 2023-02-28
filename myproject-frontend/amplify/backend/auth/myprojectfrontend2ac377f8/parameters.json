@@ -1,0 +1,19 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "myprojectfrontend2ac377f8",
+  "serviceType": "imported",
+  "region": "us-east-2",
+  "usernameAttributes": [
+    "email"
+  ],
+  "requiredAttributes": [
+    "email"
+  ],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": []
+}

@@ -1,0 +1,114 @@
+{
+  "auth": {
+    "myprojectfrontend2ac377f8": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    },
+    "AMPLIFY_auth_myprojectfrontend2ac377f8_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "myprojectfrontend2ac377f8"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "s3f49ad903": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}
